@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+<body>
+    <div class="container">
+            <!-- This is my header box-->
+            <div class="jumbotron" style="background-color: brown ; color: white;">
+                    <h1 class="text-center">
+                      Train Schedule
+                    </h1>
+            </div>
+            <!--Here's for Current Train info displayed-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card bg-secondary">
+                        <div class="card-header text-white">
+                            <strong>Current Train Schedule</strong>
+                        </div>
+                        <div class="card-body bg-white">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Train Name</th>
+                                        <th scope="col">Destination</th>
+                                        <th scope="col">Frequency</th>
+                                        <th scope="col">Next Arrival</th>
+                                        <th scope="col">Minutes Away</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="train-table">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Add employee Forms here-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card bg-secondary">
+                        <div class="card-header text-white">
+                          <strong>Add Train</strong>
+                        </div>
+                        <div class="card-body bg-white">
+                            <form role="form">
+                                <div class="form-group">
+                                <label for="eName">Train Name</label>
+                                <input type="text" class="form-control" id="eName">
+                                </div>
+                                <div class="form-group">
+                                <label for="destination">Destination</label>
+                                <input type="text" class="form-control" id="destination">
+                                </div>
+                                <div class="form-group">
+                                        <label for="time">First Train Time (24HR - e.g. 18:15 for 6:15PM)</label>
+                                        <input type="text" class="form-control" id="time">
+                                </div>
+                                <div class="form-group">
+                                        <label for="frequency">Frequency (Minutes)</label>
+                                        <input type="number" class="form-control" id="frequency">
+                                </div>
+                                <button type="submit" class="btn btn-warning" id="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="logic.js"></script>
+</body>
+</html>

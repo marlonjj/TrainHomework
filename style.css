@@ -1,0 +1,15 @@
+h1{
+    font-size: 48pt;
+}
+
+label{
+    font-weight: bold;
+}
+
+.row{
+    margin-bottom: 20px;
+}
+
+.card-header{
+    font-size: 16pt;
+}
